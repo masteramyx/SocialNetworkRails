@@ -11,6 +11,13 @@
   <body>
     <%# provides margins that adjust based on screen width%>
     <div class="container">
+<%# div class="alert", is used for displaying FLASH MESSAGES %>
+      <% if notice %>
+        <div class="alert alert-success"><%= notice %></div>
+      <% end %>
+      <% if alert %>
+        <div class="alert alert-danger"><%= alert %></div>
+      <% end %>
       <%= yield %>
     </div>
   </body>
